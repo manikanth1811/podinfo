@@ -1,4 +1,23 @@
+# # steps:
+# # - name: 'gcr.io/cloud-builders/docker'
+# #   args: ['build','-f' , 'Dockerfile', '-t', 'gcr.io/$PROJECT_ID/podinfo:$BRANCH_NAME-$SHORT_SHA', '.']
+# # images: ['gcr.io/$PROJECT_ID/podinfo:$BRANCH_NAME-$SHORT_SHA']
+
+
+
+
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','-f' , 'Dockerfile', '-t', 'gcr.io/$PROJECT_ID/podinfo:$BRANCH_NAME-$SHORT_SHA', '.']
-images: ['gcr.io/$PROJECT_ID/podinfo:$BRANCH_NAME-$SHORT_SHA']
+  args: ['build','-f' , 'Dockerfile','--build-arg','REVISION=6.3.0','--build-arg','VERSION=6.3.0', '-t', 'us-west2-docker.pkg.dev/$PROJECT_ID/docker-repo/podinfo:6.3.0', '.']
+images: ['us-west2-docker.pkg.dev/$PROJECT_ID/docker-repo/podinfo:6.3.0']
+
+
+# steps:
+#   - name: 'gcr.io/cloud-builders/git'
+#     entrypoint: 'bash'
+#     args:
+#       - '-c'
+#       - |
+#         git config --global credential.helper gcloud.sh
+#         git clone --branch my-branch https://github.com/my-username/my-repo.git
+#         cd my-repo

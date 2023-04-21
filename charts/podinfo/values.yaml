@@ -7,8 +7,8 @@ backend: #http://backend-podinfo:9898/echo
 backends: []
 
 image:
-  repository: ghcr.io/stefanprodan/podinfo
-  tag: 6.3.4
+  repository: us-west2-docker.pkg.dev/tactile-wave-383702/docker-repo/podinfo
+  tag: 6.3.2
   pullPolicy: IfNotPresent
 
 ui:

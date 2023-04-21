@@ -13,10 +13,10 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 
-	"github.com/stefanprodan/podinfo/pkg/api"
-	"github.com/stefanprodan/podinfo/pkg/grpc"
-	"github.com/stefanprodan/podinfo/pkg/signals"
-	"github.com/stefanprodan/podinfo/pkg/version"
+	"github.com/manikanth1811/podinfo/pkg/api"
+	"github.com/manikanth1811/podinfo/pkg/grpc"
+	"github.com/manikanth1811/podinfo/pkg/signals"
+	"github.com/manikanth1811/podinfo/pkg/version"
 	go_grpc "google.golang.org/grpc"
 )
 
